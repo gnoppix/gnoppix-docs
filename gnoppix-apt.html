@@ -3,7 +3,7 @@
   <head>
     
 <meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Team Gnoppix · Gnoppix Q&amp;A</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Gnoppix Repository · Gnoppix Q&amp;A</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="Gnoppix Online Documentation
 ">
 
@@ -42,11 +42,11 @@
     }
   };
 </script>
-      <link rel="prev" href="/join-gnoppix.html" />
+      <link rel="prev" href="/gnoppixctl.html" />
     
 
     
-      <link rel="next" href="/references.html" />
+      <link rel="next" href="/vpn.html" />
     
 
   </head>
@@ -510,14 +510,28 @@
           
           
             
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           
 
           
 
           
-            <li class="chapter ">
+
+          
+            <li class="chapter active">
           
 
             <a href="/gnoppix-apt.html">
@@ -575,6 +589,22 @@
 
           
           
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
           
 
@@ -774,20 +804,6 @@
           
           
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           
 
           
@@ -795,7 +811,7 @@
           
 
           
-            <li class="chapter active">
+            <li class="chapter ">
           
 
             <a href="/team-gnoppix.html">
@@ -853,22 +869,6 @@
 
           
           
-            
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             
           
 
@@ -1029,7 +1029,7 @@
     <div class="header-chapter-num">
       
       
-        Chapter 10.
+        Chapter 6.
       
     </div>
     <!-- .header-chapter-num -->
@@ -1038,9 +1038,9 @@
 
 
   <h1
-    id="/team-gnoppix"
+    id="/gnoppix-apt"
     data-level="1.1"
-    class="no_toc">Team Gnoppix</h1>
+    class="no_toc">Gnoppix Repository</h1>
 
 
 <section class="normal markdown-section">
@@ -1048,7 +1048,7 @@
 
   
     <div class="chapter-abstract color-callout-dark">
-      Team Gnoppix
+      Gnoppix Software Repositories
     </div>
   
 
@@ -1056,12 +1056,38 @@
     
     
     
+      <div class="page-toc">
+        <div class="page-toc-heading">
+          In this chapter:
+          <ul><li><a href="#a-warning">A Warning!</a></li><li><a href="#gnoppix-software-repositories">Gnoppix Software repositories</a></li></ul>
+        </div>
+      </div>
+    
   
 
-  <p>Team Gnoppix</p>
+  <p>Gnoppix offer over 59,000 Software packages.</p>
+
+<p>The topic of repositories is always a large one, and comes up frequently. It is an item which people often get wrong and confused with. Please take the time to read the information below and any references which is linked to before acting on anything.</p>
+
+<h2 id="a-warning">A Warning!</h2>
+<p>If you use different repositories, it will break your system. Do not use Debian unstable, Ubuntu ppa or any other debian repos’s expect the following.</p>
+
+<h2 id="gnoppix-software-repositories">Gnoppix Software repositories</h2>
+
+<p>With network access, you should have the following entry present in /etc/apt/sources.list:</p>
+
+<p>deb http://http.kali.org/kali kali-rolling main contrib non-free</p>
+
+<p>deb https://archive.gnoppix.com/gnoppix community main</p>
+
+<p>Additional line for source packages</p>
+
+<p>deb-src http://http.kali.org/kali kali-rolling main contrib non-free</p>
+
+<p>deb-src http://archive.gnoppix.com/gnoppix community main</p>
 
 <hr />
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This file is located at: _chapters/090-team-gnoppix.md
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This file is located at: _chapters/056-gnoppix-apt-repositories.md
 </code></pre></div></div>
 <hr />
 
@@ -1074,21 +1100,21 @@
 
     
       <a
-        href="/references.html"
+        href="/vpn.html"
         class="chapter-next "
-        aria-label="Next page: References"
+        aria-label="Next page: VPN/Tor"
         data-level="1.1"
-        data-path="/references.html">
+        data-path="/vpn.html">
         <div class="pager-arrow">
           <i class="fa fa-arrow-right"></i>
         </div>
         <div class="pager-labels">
           <div class="part">
             Next
-            
+            : Chapter 7.
           </div>
           <div class="chapter-label">
-            References
+            VPN/Tor
           </div>
         </div>
       </a>
@@ -1096,21 +1122,21 @@
 
     
       <a
-        href="/join-gnoppix.html"
+        href="/gnoppixctl.html"
         class="chapter-prev "
-        aria-label="Previous page: Join Gnoppix"
+        aria-label="Previous page: Gnoppix Control"
         data-level="1.1"
-        data-path="/join-gnoppix.html">
+        data-path="/gnoppixctl.html">
         <div class="pager-arrow">
           <i class="fa fa-arrow-left"></i>
         </div>
         <div class="pager-labels">
           <div class="part">
             Previous
-            : Chapter 9.
+            : Chapter 5.
           </div>
           <div class="chapter-label">
-            Join Gnoppix
+            Gnoppix Control
           </div>
         </div>
       </a>
@@ -1280,7 +1306,7 @@
     "gitbook": "*"
   },
   "file": {
-    "path": "_chapters/090-team-gnoppix.md",
+    "path": "_chapters/056-gnoppix-apt-repositories.md",
     "mtime": "2023-03-11 18:06:43 +0700",
     "type": "markdown"
   },
