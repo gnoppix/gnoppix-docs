@@ -1059,7 +1059,7 @@
       <div class="page-toc">
         <div class="page-toc-heading">
           In this chapter:
-          <ul><li><a href="#a-warning">A Warning!</a></li><li><a href="#gnoppix-software-repositories">Gnoppix Software repositories</a></li></ul>
+          <ul><li><a href="#a-warning">A Warning!</a></li><li><a href="#gnoppix-software-repositories">Gnoppix Software repositories</a></li><li><a href="#import-gnoppix-repo-key">Import Gnoppix Repo Key</a></li></ul>
         </div>
       </div>
     
@@ -1076,15 +1076,24 @@
 
 <p>With network access, you should have the following entry present in /etc/apt/sources.list:</p>
 
-<p>deb http://http.kali.org/kali kali-rolling main contrib non-free</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://http.kali.org/kali kali-rolling main contrib non-free
 
-<p>deb https://archive.gnoppix.com/gnoppix community main</p>
+deb [signed-by=/etc/apt/trusted.gpg.d/gnoppix.gpg] https://archive.gnoppix.com/ community main
+</code></pre></div></div>
 
-<p>Additional line for source packages</p>
+<p>[Additional line for source packages]</p>
 
-<p>deb-src http://http.kali.org/kali kali-rolling main contrib non-free</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb-src http://http.kali.org/kali kali-rolling main contrib non-free
 
-<p>deb-src https://archive.gnoppix.com/gnoppix community main</p>
+deb-src https://archive.gnoppix.com/gnoppix community main
+</code></pre></div></div>
+
+<h2 id="import-gnoppix-repo-key">Import Gnoppix Repo Key</h2>
+
+<p>Gnoppix Repo key for V. 22/23</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget -O- https://archive.gnoppix.com/gnoppix.key | sudo gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/gnoppix.gpg &gt; /dev/null 2&gt;&amp;1 
+</code></pre></div></div>
 
 <hr />
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This file is located at: _chapters/056-gnoppix-apt-repositories.md
@@ -1307,12 +1316,12 @@
   },
   "file": {
     "path": "_chapters/056-gnoppix-apt-repositories.md",
-    "mtime": "2023-03-11 19:22:24 +0700",
+    "mtime": "2023-03-12 17:52:41 +0700",
     "type": "markdown"
   },
   "gitbook": {
     "version": "",
-    "time": "2023-03-11 19:22:24 +0700"
+    "time": "2023-03-12 17:52:41 +0700"
   },
   "basePath": "",
   "book": {
