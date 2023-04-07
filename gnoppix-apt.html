@@ -1604,14 +1604,14 @@
 
 <p>With network access, you should have the following entry present in /etc/apt/sources.list:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://http.kali.org/kali kali-rolling main contrib non-free
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb [arch=amd64] http://repo.gnoppix.com/ gnoppix main contrib non-free
 
 deb [signed-by=/etc/apt/trusted.gpg.d/gnoppix.gpg] https://archive.gnoppix.com/ community main
 </code></pre></div></div>
 
 <p>[Additional line for source packages]</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb-src http://http.kali.org/kali kali-rolling main contrib non-free
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb-src [arch=amd64] http://repo.gnoppix.com/ gnoppix main contrib non-free
 
 deb-src https://archive.gnoppix.com/ community main
 </code></pre></div></div>
@@ -1625,7 +1625,7 @@ deb-src https://archive.gnoppix.com/ community main
 
 <h2 id="repositories-for-patreon-supporter">Repositories for Patreon Supporter</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://http.kali.org/kali kali-rolling main contrib non-free
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb [arch=amd64] http://repo.gnoppix.com/ gnoppix main contrib non-free
 
 deb [signed-by=/etc/apt/trusted.gpg.d/gnoppix.gpg] https://patreon.gnoppix.com/ patreon main
 </code></pre></div></div>
@@ -1848,12 +1848,12 @@ deb [signed-by=/etc/apt/trusted.gpg.d/gnoppix.gpg] https://patreon.gnoppix.com/ 
   },
   "file": {
     "path": "_chapters/056-gnoppix-apt-repositories.md",
-    "mtime": "2023-03-31 18:33:50 +0700",
+    "mtime": "2023-04-07 21:09:24 +0700",
     "type": "markdown"
   },
   "gitbook": {
     "version": "",
-    "time": "2023-03-31 18:33:50 +0700"
+    "time": "2023-04-07 21:09:24 +0700"
   },
   "basePath": "",
   "book": {
