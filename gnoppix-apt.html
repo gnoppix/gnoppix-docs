@@ -1605,7 +1605,7 @@
 <p>With network access, you should have the following entry present in /etc/apt/sources.list:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://packages.gnoppix.com/gnoppix gnoppix-rolling main contrib non-free non-free-firmware
-deb [signed-by=/etc/apt/trusted.gpg.d/gnoppix.gpg] http://archive.gnoppix.com/ community main
+deb  http://archive.gnoppix.com/ community main
 </code></pre></div></div>
 
 <p>[Additional line for source packages]</p>
@@ -1624,7 +1624,7 @@ deb-src http://archive.gnoppix.com/ community main
 <h2 id="repositories-for-patreon-supporter">Repositories for Patreon Supporter</h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://packages.gnoppix.com/gnoppix gnoppix-rolling main contrib non-free non-free-firmware
-deb [signed-by=/etc/apt/trusted.gpg.d/gnoppix.gpg] https://&lt;username&gt;:&lt;password&gt;@patreon.gnoppix.com/ community main
+deb https://&lt;username&gt;:&lt;password&gt;@patreon.gnoppix.com/ patreon main
 
 </code></pre></div></div>
 
