@@ -3,7 +3,7 @@
   <head>
     
 <meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Gnoppix Control · Gnoppix Q&amp;A</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Gnoppix Root Pass · Gnoppix Q&amp;A</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="Gnoppix Online Documentation
 ">
 
@@ -42,11 +42,11 @@
     }
   };
 </script>
-      <link rel="prev" href="/secure-general.html" />
+      <link rel="prev" href="/about-gnoppix.html" />
     
 
     
-      <link rel="next" href="/gnoppix-apt.html" />
+      <link rel="next" href="/get-gnoppix.html" />
     
 
   </head>
@@ -246,14 +246,28 @@
           
           
             
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           
 
           
 
           
-            <li class="chapter ">
+
+          
+            <li class="chapter active">
           
 
             <a href="/gnoppix-root.html">
@@ -311,6 +325,22 @@
 
           
           
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
           
 
@@ -642,20 +672,6 @@
           
           
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           
 
           
@@ -663,7 +679,7 @@
           
 
           
-            <li class="chapter active">
+            <li class="chapter ">
           
 
             <a href="/gnoppixctl.html">
@@ -721,22 +737,6 @@
 
           
           
-            
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             
           
 
@@ -1623,7 +1623,7 @@
     <div class="header-chapter-num">
       
       
-        Chapter 8.
+        Chapter 2.
       
     </div>
     <!-- .header-chapter-num -->
@@ -1632,9 +1632,9 @@
 
 
   <h1
-    id="/gnoppixctl"
+    id="/gnoppix-root"
     data-level="1.1"
-    class="no_toc">Gnoppix Control</h1>
+    class="no_toc">Gnoppix Root Pass</h1>
 
 
 <section class="normal markdown-section">
@@ -1642,7 +1642,7 @@
 
   
     <div class="chapter-abstract color-callout-dark">
-      Gnoppix Control Center
+      Gnoppix Root Pass
     </div>
   
 
@@ -1652,7 +1652,15 @@
     
   
 
-  <p>Gnoppix Control Center</p>
+  <p>The default root password for the livecd is empty. This means that you do not need to enter a password when logging in. However, if you’re asked for a password use:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gnoppix
+</code></pre></div></div>
+
+<p>as password. If you’re asked for a root password you can do this by running the following command in a terminal:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo passwd root
+</code></pre></div></div>
 
 <hr />
 
@@ -1665,21 +1673,21 @@
 
     
       <a
-        href="/gnoppix-apt.html"
+        href="/get-gnoppix.html"
         class="chapter-next "
-        aria-label="Next page: Gnoppix Repository"
+        aria-label="Next page: How to get Gnoppix"
         data-level="1.1"
-        data-path="/gnoppix-apt.html">
+        data-path="/get-gnoppix.html">
         <div class="pager-arrow">
           <i class="fa fa-arrow-right"></i>
         </div>
         <div class="pager-labels">
           <div class="part">
             Next
-            : Chapter 9.
+            : Chapter 3.
           </div>
           <div class="chapter-label">
-            Gnoppix Repository
+            How to get Gnoppix
           </div>
         </div>
       </a>
@@ -1687,21 +1695,21 @@
 
     
       <a
-        href="/secure-general.html"
+        href="/about-gnoppix.html"
         class="chapter-prev "
-        aria-label="Previous page: Gnoppix Secure General"
+        aria-label="Previous page: What is Gnoppix Linux"
         data-level="1.1"
-        data-path="/secure-general.html">
+        data-path="/about-gnoppix.html">
         <div class="pager-arrow">
           <i class="fa fa-arrow-left"></i>
         </div>
         <div class="pager-labels">
           <div class="part">
             Previous
-            : Chapter 7.
+            : Chapter 1.
           </div>
           <div class="chapter-label">
-            Gnoppix Secure General
+            What is Gnoppix Linux
           </div>
         </div>
       </a>
@@ -1871,7 +1879,7 @@
     "gitbook": "*"
   },
   "file": {
-    "path": "_chapters/055-gnoppixctl.md",
+    "path": "_chapters/015-root.md",
     "mtime": "2023-05-24 00:32:43 +0700",
     "type": "markdown"
   },

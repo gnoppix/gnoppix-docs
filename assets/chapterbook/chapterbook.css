@@ -48,7 +48,7 @@ html {
     /*scroll-padding-top: 0;*/
 }
 .book.with-summary .book-body .body-inner {
-    margin-top: 1em;
+    margin-top: 0;
 }
 /* Override gitbook styles */
 @media (min-width: 600px) {
@@ -279,7 +279,7 @@ html {
     bottom: auto;
 }
 .book-body .body-inner .page-wrapper .page-inner {
-    padding-top: 0;
+    padding-top: 10px;
     padding-bottom: 150px;
 }
 /*
@@ -405,13 +405,10 @@ html {
     }
 }
 
-.page-inner h1 {
-    margin: 0.25em 0 0.5em 0;
-}
 h1 + .page-subtitle {
-    margin-bottom: 1em;
-    margin-top: 0.5em;
-    font-size: 1.2em;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    font-size: 16px;
     font-style: italic;
 }
 
@@ -558,61 +555,5 @@ table.inspect-chapter-iterate-vars th { text-align: right; }
 
 table.inspect-chapter-iterate-vars th.divider { 
     text-align: center; 
-    text-transform: uppercase;
-}
-
-.book-summary ul.summary li.header a {
-    padding: 0;
-}
-.part-index h1 {
-    text-transform: uppercase;
-}
-
-.breadcrumb {
-    /*padding: 0 .5rem;*/
-    padding: 0;
-    line-height: 2em;
-}
-
-.breadcrumb ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.breadcrumb li {
-    margin-right: .75em;
-    color: #000;
-}
-.breadcrumb .book-icon {
-    height: 16px;
-    width: 16px;
-    vertical-align: text-bottom;
-    margin-right: .25em;
-}
-    
-/*.breadcrumb li:not(:last-child)::after {*/
-.breadcrumb li:not(.no-arrow)::after {
-    display: inline-block;
-    /*margin-left: .5em;*/
-    content: '\203a';
-}
-
-.breadcrumb-part {
-    text-transform: uppercase;
-}
-
-.book.color-theme-1 .breadcrumb li a {
-    color: inherit;
-}
-.book.color-theme-2 .breadcrumb li {
-    color: #ccc;
-}
-
-.heading-chapter-title {
-    margin-top: 0.25em;
-}
-.heading-part {
     text-transform: uppercase;
 }
