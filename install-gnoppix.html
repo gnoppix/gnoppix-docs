@@ -1782,18 +1782,11 @@
     
     
     
-      <div class="page-toc">
-        <div class="page-toc-heading">
-          In this chapter:
-          <ul><li><a href="#step-1-download-the-latest-gnoppix">Step-1: Download the latest Gnoppix</a></li><li><a href="#step-2-bootable-dvdusb">Step-2: Bootable DVD/USB</a></li><li><a href="#step-3-start-the-gnoppix-installation">Step-3: Start the Gnoppix Installation</a></li><li><a href="#step-4-start-the-installation">Step-4: Start The Installation</a></li><li><a href="#-add-secreenshot">…. Add secreenshot</a></li></ul>
-        </div>
-      </div>
-    
   
 
   <p>Gnoppix Linux is a free and open-source Linux distribution derived from the Debian Linux distribution. This distribution is known for its stable, secure, and user-friendly interface, making it one of the most popular Linux distributions in the world. With Gnoppix 23.4 and later we gave the users the possibliity to install the LiveCD and update your System online.</p>
 
-<p><strong>Prerequisites :</strong></p>
+<p><strong>Prerequisites XFCE :</strong></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HDD minimum       : 15 GB (Recommended 20GB)  
 RAM minimum       : 1 GB (Recommended 2 GB)
@@ -1801,23 +1794,50 @@ System Type       : 64-bit x86 System/32-bit or ARM
 Installation kit  : Bootable DVD/USB/.iso
 </code></pre></div></div>
 
-<p>Hint: If you plan to use AI add 10/20 GB more Diskspace a 1 LMM is ~ 8-10GB</p>
+<p><strong>Prerequisites Gnome :</strong></p>
 
-<h2 id="step-1-download-the-latest-gnoppix">Step-1: Download the latest Gnoppix</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HDD minimum       : 20 GB (Recommended 50GB)
+RAM minimum       : 2 GB (Recommended 4 GB)
+System Type       : 64-bit x86 System/32-bit or ARM
+Installation kit  : Bootable DVD/USB/.iso
 
-<p>An ISO file contains a comprehensive package of data and information that is essential for the installation of an operating system. For a successful installation, you must obtain the correct ISO file that matches your system specifications. This is because various ISO files are specifically tailored to different computer types and architectures. The official website of Gnoppix provides a link for downloading the Gnoppix ISO file. It is advisable to verify the file’s checksum to guarantee its authenticity and accuracy. This crucial step will ensure that the downloaded ISO file is not corrupted and will be installed correctly on your system. <a href="https://docs.gnoppix.com/get-gnoppix.html">Click here to get the download information</a></p>
+Hint: If you plan to use AI add 10/20 GB more Diskspace a 1 LMM is ~ 8-10GB
 
-<h2 id="step-2-bootable-dvdusb">Step-2: Bootable DVD/USB</h2>
+## Step-1: Download the latest Gnoppix 
 
-<p>If you plan to install Gnoppix on VirtualBox, it is recommended to utilize the ISO image instead of a bootable DVD or USB drive. Our setup consists of a virtualized environment, whereas a bare metal installation necessitates a bootable DVD or USB drive. In case you encounter any problems creating a bootable USB to install Gnoppix from USB.</p>
+An ISO file contains a comprehensive package of data and information that is essential for the installation of an operating system. For a successful installation, you must obtain the correct ISO file that matches your system specifications. This is because various ISO files are specifically tailored to different computer types and architectures. The official website of Gnoppix provides a link for downloading the Gnoppix ISO file. It is advisable to verify the file's checksum to guarantee its authenticity and accuracy. This crucial step will ensure that the downloaded ISO file is not corrupted and will be installed correctly on your system. [Click here to get the download information](https://docs.gnoppix.com/get-gnoppix.html)
 
-<h2 id="step-3-start-the-gnoppix-installation">Step-3: Start the Gnoppix Installation</h2>
+## Step-2: Bootable DVD/USB
 
-<p>Upon booting from the “.iso” or “bootable media kit, you will be welcomed with a screen presenting multiple options. To initiate the installation process of Gnoppix, you must select the “Live system (amd64)” option and hit the Enter key.</p>
+If you plan to install Gnoppix on VirtualBox, it is recommended to utilize the ISO image instead of a bootable DVD or USB drive. Our setup consists of a virtualized environment, whereas a bare metal installation necessitates a bootable DVD or USB drive. In case you encounter any problems creating a bootable USB to install Gnoppix from USB.
 
-<h2 id="step-4-start-the-installation">Step-4: Start The Installation</h2>
 
-<h2 id="-add-secreenshot">…. Add secreenshot</h2>
+## Step-3: Start the Gnoppix Installation
+
+Upon booting from the ".iso" or "bootable media kit, you will be welcomed with a screen presenting multiple options. To initiate the installation process of Gnoppix, you must select the "Live system (amd64)" option and hit the Enter key.
+
+## Step-4: Start The Installation
+
+There 2 ways to install Gnoppix to you Disk
+
+- open a terminal and run 
+
+</code></pre></div></div>
+<p>sudo gnoppix-welcome</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+alternative you can install the system also from the 'live-installer' Application
+
+
+</code></pre></div></div>
+<p>sudo live-installer
+```</p>
+
+<p>Warning, Warning as most people wish, you can install your system locally. Unfortunelatly the calamares installer
+doesnt support many features, QT-lib depends, thats also why QT is installed on a Gnome system :) For example missing harddisk cryption. Again, be are in all you moves, all commands,i visist pages, traces ….</p>
+
+<p>The better way to use it, run the LiveCD with crypted persitance mode. You can repleace you lifeCD time to time get the new features and security updates, with the updated version you are still able continue to use your very private data or session on a crypted device. Which can be also a small (shinked) partition on you device hardisk.</p>
+
+<hr />
 
 
   
@@ -2035,12 +2055,12 @@ Installation kit  : Bootable DVD/USB/.iso
   },
   "file": {
     "path": "_chapters/070-install-gnoppix.md",
-    "mtime": "2023-06-23 10:41:34 +0700",
+    "mtime": "2023-06-27 11:52:22 +0700",
     "type": "markdown"
   },
   "gitbook": {
     "version": "",
-    "time": "2023-06-23 10:41:34 +0700"
+    "time": "2023-06-27 11:52:22 +0700"
   },
   "basePath": "",
   "book": {
