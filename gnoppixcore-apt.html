@@ -3,7 +3,7 @@
   <head>
     
 <meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Gnoppix Repository · Gnoppix Q&amp;A</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Gnoppix Core Repository · Gnoppix Q&amp;A</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="Gnoppix Online Documentation
 ">
 
@@ -732,11 +732,11 @@
             <li class="chapter active">
           
 
-            <a href="/gnoppix-apt.html">
+            <a href="/gnoppixcore-apt.html">
               
                 9.
               
-              Gnoppix Repository
+              Gnoppix Core Repository
             </a>
 
             
@@ -1764,9 +1764,9 @@
 
 
   <h1
-    id="/gnoppix-apt"
+    id="/gnoppixcore-apt"
     data-level="1.1"
-    class="no_toc">Gnoppix Repository</h1>
+    class="no_toc">Gnoppix Core Repository</h1>
 
 
 <section class="normal markdown-section">
@@ -1774,7 +1774,7 @@
 
   
     <div class="chapter-abstract color-callout-dark">
-      Gnoppix Software Repositories
+      Gnoppix Core Software Repositories
     </div>
   
 
@@ -1785,54 +1785,77 @@
       <div class="page-toc">
         <div class="page-toc-heading">
           In this chapter:
-          <ul><li><a href="#a-warning">A Warning!</a></li><li><a href="#gnoppix-software-repositories">Gnoppix Software repositories</a></li><li><a href="#import-gnoppix-repo-key">Import Gnoppix Repo Key</a></li><li><a href="#repositories-for-gnoppix-members">Repositories for Gnoppix Members</a></li><li><a href="#images-and-iso-repository-for-gnoppix-members">IMAGES and ISO Repository for Gnoppix Members.</a></li></ul>
+          <ul><li><a href="#gnoppix-core-repositories">Gnoppix Core Repositories</a></li><li><a href="#a-warning">A Warning!</a></li><li><a href="#gnoppix-core-desktop-software-repositories">Gnoppix Core (Desktop) Software repositories</a></li><li><a href="#import-gnoppix-repo-key">Import Gnoppix Repo Key</a></li><li><a href="#repositories-for-gnoppix-members--gnoppix-pro">Repositories for Gnoppix Members / Gnoppix Pro</a></li><li><a href="#repositories-for-gnoppix-memeber--gnoppix-lts">Repositories for Gnoppix Memeber / Gnoppix LTS</a></li><li><a href="#images-and-iso-repository-for-gnoppix-members">IMAGES and ISO Repository for Gnoppix Members.</a></li><li><a href="#questions-and-answers">Questions and Answers</a></li></ul>
         </div>
       </div>
     
   
 
-  <p>Gnoppix offer over 59,000 Software packages.</p>
+  <h2 id="gnoppix-core-repositories">Gnoppix Core Repositories</h2>
+
+<p>Gnoppix offer over 62,000 Software packages.</p>
 
 <p>The topic of repositories is always a large one, and comes up frequently. It is an item which people often get wrong and confused with. Please take the time to read the information below and any references which is linked to before acting on anything.</p>
 
 <h2 id="a-warning">A Warning!</h2>
-<p>If you use different repositories, it will break your system. Do not use Debian unstable, Ubuntu ppa or any other debian repos’s expect the following.</p>
 
-<h2 id="gnoppix-software-repositories">Gnoppix Software repositories</h2>
+<p>If you use different repositories, it will break your system. Do not use Ubuntu ppa or any other debian repos’s expect the following.</p>
+
+<h2 id="gnoppix-core-desktop-software-repositories">Gnoppix Core (Desktop) Software repositories</h2>
 
 <p>With network access, you should have the following entry present in /etc/apt/sources.list:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://packages.gnoppix.com/gnoppix gnoppix-rolling main contrib non-free non-free-firmware
-deb http://archive.gnoppix.com/ community main
+<p>XFCE/KDE</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://deb.debian.org/debian bookworm main non-free-firmware
+deb http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
 </code></pre></div></div>
 
-<p>[Additional line for source packages]</p>
+<p>Gnome</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://kali.org/kali kali-rolling main contrib non-free non-free-firmware
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb-src http://packages.gnoppix.com/gnoppix gnoppix-rolling main contrib non-free non-free-firmware
-deb-src http://archive.gnoppix.com/ community main
+</code></pre></div></div>
+
+<p>[Additional line for Gnoppix Community packages]</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://archive.gnoppix.com/ community main
 </code></pre></div></div>
 
 <h2 id="import-gnoppix-repo-key">Import Gnoppix Repo Key</h2>
 
-<p>Gnoppix Repo key for V. 22/23</p>
+<p>Gnoppix Repo key for V. 22/23/24</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget -O- http://archive.gnoppix.com/gnoppix.key | sudo gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/gnoppix.gpg &gt; /dev/null 2&gt;&amp;1 
 </code></pre></div></div>
 
-<h2 id="repositories-for-gnoppix-members">Repositories for Gnoppix Members</h2>
+<h1 id="following-repos-are-for-gnoppix-member--gnoppix-pro">Following Repos are for Gnoppix Member / Gnoppix Pro</h1>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://packages.gnoppix.com/gnoppix gnoppix-rolling main contrib non-free non-free-firmware
+<h2 id="repositories-for-gnoppix-members--gnoppix-pro">Repositories for Gnoppix Members / Gnoppix Pro</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://&lt;username&gt;:&lt;password&gt;@packages.gnoppix.org/gnoppix pro main contrib non-free non-free-firmware
+deb https://&lt;username&gt;:&lt;password&gt;@patreon.gnoppix.com/ patreon main
+
+</code></pre></div></div>
+
+<h2 id="repositories-for-gnoppix-memeber--gnoppix-lts">Repositories for Gnoppix Memeber / Gnoppix LTS</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://&lt;username&gt;:&lt;password&gt;@packages.gnoppix.org/gnoppix lts main contrib non-free non-free-firmware
 deb https://&lt;username&gt;:&lt;password&gt;@patreon.gnoppix.com/ patreon main
 
 </code></pre></div></div>
 
 <h2 id="images-and-iso-repository-for-gnoppix-members">IMAGES and ISO Repository for Gnoppix Members.</h2>
 
-<p>Up to 1GB connections you can priority download as a Gnoppix Member the latest stable and development images</p>
+<p>Up to 10GB connections you can priority download as a Gnoppix Member the latest stable and development images</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://patreon.gnoppix.com/iso/
 
 </code></pre></div></div>
+
+<h2 id="questions-and-answers">Questions and Answers</h2>
+
+<p>Q: Where is the Gnoppix Repo and it’s sources located? 
+A: Gnoppix is based on opensource. You will find all sources, including build scripts to remaster it at https://github.com/gnoppix</p>
 
 <hr />
 
@@ -2051,13 +2074,13 @@ deb https://&lt;username&gt;:&lt;password&gt;@patreon.gnoppix.com/ patreon main
     "gitbook": "*"
   },
   "file": {
-    "path": "_chapters/056-gnoppix-apt-repositories.md",
-    "mtime": "2023-08-01 20:08:37 +0700",
+    "path": "_chapters/055-gnoppixcore-apt-repositories.md",
+    "mtime": "2023-08-26 22:15:49 +0700",
     "type": "markdown"
   },
   "gitbook": {
     "version": "",
-    "time": "2023-08-01 20:08:37 +0700"
+    "time": "2023-08-26 22:15:49 +0700"
   },
   "basePath": "",
   "book": {
