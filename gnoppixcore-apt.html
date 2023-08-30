@@ -1806,19 +1806,11 @@
 <p>With network access, you should have the following entry present in /etc/apt/sources.list:</p>
 
 <p>XFCE/KDE</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://deb.debian.org/debian bookworm main non-free-firmware
-deb http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
-deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
-</code></pre></div></div>
-
-<p>Gnome</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://kali.org/kali kali-rolling main contrib non-free non-free-firmware
-
-</code></pre></div></div>
-
-<p>[Additional line for Gnoppix Community packages]</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://archive.gnoppix.com/ community main
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://deb.debian.org/debian/ bookworm main contrib non-free non-free-firmware
+deb https://deb.debian.org/debian/ bookworm-updates main contrib non-free non-free-firmware
+deb https://deb.debian.org/debian/ bookworm-backports main contrib non-free non-free-firmware
+deb https://deb.debian.org/debian-security/ bookworm-security main contrib non-free non-free-firmware
+deb http://archive.gnoppix.com/ community main
 </code></pre></div></div>
 
 <h2 id="import-gnoppix-repo-key">Import Gnoppix Repo Key</h2>
@@ -1832,16 +1824,20 @@ deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
 
 <h2 id="repositories-for-gnoppix-members--gnoppix-pro">Repositories for Gnoppix Members / Gnoppix Pro</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://&lt;username&gt;:&lt;password&gt;@packages.gnoppix.org/gnoppix pro main contrib non-free non-free-firmware
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://&lt;username&gt;:&lt;password&gt;@packages.gnoppix.org/gnoppix/ stable main contrib non-free non-free-firmware
+deb https://&lt;username&gt;:&lt;password&gt;@packages.gnoppix.org/gnoppix/ bookworm-updates main contrib non-free non-free-firmware
+deb https://&lt;username&gt;:&lt;password&gt;@packages.gnoppix.org/gnoppix/ bookworm-backports main contrib non-free non-free-firmware
+deb https://&lt;username&gt;:&lt;password&gt;@packages.gnoppix.org/gnoppix-security bookworm-security main contrib non-free non-free-firmware
 deb https://&lt;username&gt;:&lt;password&gt;@patreon.gnoppix.com/ patreon main
-
 </code></pre></div></div>
 
 <h2 id="repositories-for-gnoppix-memeber--gnoppix-lts">Repositories for Gnoppix Memeber / Gnoppix LTS</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://&lt;username&gt;:&lt;password&gt;@packages.gnoppix.org/gnoppix lts main contrib non-free non-free-firmware
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://&lt;username&gt;:&lt;password&gt;@packages.gnoppix.org/gnoppix/ stable main contrib non-free non-free-firmware
+deb https://&lt;username&gt;:&lt;password&gt;@packages.gnoppix.org/gnoppix/ bookworm-updates main contrib non-free non-free-firmware
+deb https://&lt;username&gt;:&lt;password&gt;@packages.gnoppix.org/gnoppix/ bookworm-backports main contrib non-free non-free-firmware
+deb https://&lt;username&gt;:&lt;password&gt;@packages.gnoppix.org/gnoppix-security bookworm-security main contrib non-free non-free-firmware
 deb https://&lt;username&gt;:&lt;password&gt;@patreon.gnoppix.com/ patreon main
-
 </code></pre></div></div>
 
 <h2 id="images-and-iso-repository-for-gnoppix-members">IMAGES and ISO Repository for Gnoppix Members.</h2>
@@ -1855,7 +1851,7 @@ deb https://&lt;username&gt;:&lt;password&gt;@patreon.gnoppix.com/ patreon main
 <h2 id="questions-and-answers">Questions and Answers</h2>
 
 <p>Q: Where is the Gnoppix Repo and it’s sources located? 
-A: Gnoppix is based on opensource. You will find all sources, including build scripts to remaster it at https://github.com/gnoppix</p>
+A: Gnoppix is based on opensource. You will find all sources, including the build scripts, feel free to customize it at https://github.com/gnoppix</p>
 
 <hr />
 
@@ -2075,12 +2071,12 @@ A: Gnoppix is based on opensource. You will find all sources, including build sc
   },
   "file": {
     "path": "_chapters/055-gnoppixcore-apt-repositories.md",
-    "mtime": "2023-08-26 22:15:49 +0700",
+    "mtime": "2023-08-30 17:27:06 +0700",
     "type": "markdown"
   },
   "gitbook": {
     "version": "",
-    "time": "2023-08-26 22:15:49 +0700"
+    "time": "2023-08-30 17:27:06 +0700"
   },
   "basePath": "",
   "book": {
