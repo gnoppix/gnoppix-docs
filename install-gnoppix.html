@@ -1851,7 +1851,7 @@
       <div class="page-toc">
         <div class="page-toc-heading">
           In this chapter:
-          <ul><li><a href="#step-1-download-the-latest-gnoppix">Step-1: Download the latest Gnoppix</a></li><li><a href="#step-2-bootable-dvdusb">Step-2: Bootable DVD/USB</a></li><li><a href="#step-3-start-the-gnoppix-installation">Step-3: Start the Gnoppix Installation</a></li><li><a href="#step-4-start-the-installation">Step-4: Start The Installation</a></li></ul>
+          <ul><li><a href="#step-1-download-the-latest-gnoppix">Step-1: Download the latest Gnoppix</a></li><li><a href="#step-2-bootable-dvdusb">Step-2: Bootable DVD/USB</a></li><li><a href="#step-3-start-the-gnoppix-installation">Step-3: Start the Gnoppix Installation</a></li><li><a href="#step-4-start-the-installation">Step-4: Start The Installation</a></li><li><a href="#grub-missing-windows">Grub missing Windows</a></li></ul>
         </div>
       </div>
     
@@ -1925,6 +1925,32 @@ doesnt support many features, QT-lib depends, this is why QT is installed on a G
 
 <p>Once you have Gnoppix installed, you can live-upgrade the system. There is no need to re-install with newer images, make sure
 you have the Gnoppix Repository Server in you /etc/apt/sources/list <a href="https://docs.gnoppix.com/gnoppix-apt">Gnoppix Repositories see</a> and press “Package Updater”</p>
+
+<h2 id="grub-missing-windows">Grub missing Windows</h2>
+
+<p>In case you’ve installed Gnoppix Linux, while booting you missing your Windows or other OS installations</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>edit the file /etc/default/grub (as root/admin user) 
+</code></pre></div></div>
+
+<p>search for Line 17</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 17 #GRUB_DISABLE_OS_PROBER=false
+</code></pre></div></div>
+
+<p>remove the ‘#’</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 17 GRUB_DISABLE_OS_PROBER=false
+</code></pre></div></div>
+
+<p>and re-run</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo update-grub
+</code></pre></div></div>
+
+<p>The cause? The OS_prober feature is disabled by default in GRUB 2.06, which is the version included in Gnoppix 23. This is an upstream change designed to counter potential security issues with the OS-detecting feature (it mounts partitions to check for other OSes, this could be taken advantage of, etc).</p>
+
+<p>So, for the moment, Gnoppix 23 (or more accurately GRUB in Gnoppix 23) does not detect any other operating system during or after install. I acknowledge that this is “…a bit controversial and the outcome is not necessarily in the best interest of our users”.</p>
 
 <hr />
 
@@ -2144,12 +2170,12 @@ you have the Gnoppix Repository Server in you /etc/apt/sources/list <a href="htt
   },
   "file": {
     "path": "_chapters/070-install-gnoppix.md",
-    "mtime": "2023-09-20 01:40:17 +0700",
+    "mtime": "2023-10-01 01:11:59 -0400",
     "type": "markdown"
   },
   "gitbook": {
     "version": "",
-    "time": "2023-09-20 01:40:17 +0700"
+    "time": "2023-10-01 01:11:59 -0400"
   },
   "basePath": "",
   "book": {
